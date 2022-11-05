@@ -23,13 +23,8 @@ const Menu = () => {
   const [openBurger, setOpenBurger] = useState(false)
   const [show, setShow] = useState(false);
   const [arrow, setArrow] = useState(false);
-  const [isShow, setIsShow] = useState(false);
-  const [showProject, setIsProject] = useState(false);
 
   const toggleAccordion = () => {setShow(!show);};
-  const toggleArrow = () => {setArrow(!arrow);};
-  const switchAccordion = () => {setIsShow(!isShow);};
-  const changeAccordion = () => {setIsProject(!showProject);};
   const toggleMenu = () => { setOpenBurger(!openBurger)}
   const toggleModal = () => {
     setOpenModal(!openModal);
@@ -93,7 +88,7 @@ const Menu = () => {
                   type="text"
                   autoFocus={true}
                   className="bg-blueLight border-none outline-none w-[98.5%] h-[24px] font-medium text-[15px] 2md:w-[96.5%] xs:2md:w-[94.5%]"
-                  placeholder="Поиск"
+                  placeholder={t('search')}
                   onKeyDown={(e) =>
                       e.key === 'Enter' && handleChange(e.target.value)
                   }
