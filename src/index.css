@@ -1,0 +1,292 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+.content {
+    min-height: calc(100vh - 80px);
+}
+
+.links {
+    color: #08ecd9;
+    padding-left: 0;
+}
+
+.shadows {
+    margin: 10px 20px;
+    box-shadow:rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px,
+    rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px,
+    rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+html, body {
+    margin-bottom: 0;
+    padding: 0;
+    height: 100%;
+    position: relative;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    display: none;
+    color: white !important;
+}
+
+.detail-next {
+    background-image: url(assets/image/main/rigth.png);
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-position: center !important;
+    width: 10px !important;
+    height: 16px !important;
+    cursor: pointer;
+    z-index: 99!important;
+    margin-left: 16px;
+}
+
+.detail-prev {
+    background-image: url(assets/image/main/left.png);
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-position: center !important;
+    width: 10px !important;
+    height: 16px !important;
+    cursor: pointer;
+    z-index: 99!important;
+}
+
+.info-next {
+    background-image: url(assets/image/main/arrow-left.png);
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-position: center !important;
+    width: 6px !important;
+    height: 12px !important;
+    cursor: pointer;
+    z-index: 99!important;
+    margin-left: 16px;
+}
+
+.info-prev {
+    background-image: url(assets/image/main/left.png);
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-position: center !important;
+    width: 6px !important;
+    height: 12px !important;
+    cursor: pointer;
+    z-index: 99!important;
+}
+
+.swiper-next {
+    background-image: url(assets/image/main/rigth.png);
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-position: center !important;
+    width: 10px !important;
+    height: 20px !important;
+    cursor: pointer;
+    z-index: 99!important;
+}
+
+.swiper-prev {
+    background-image: url(assets/image/main/left.png);
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-position: center !important;
+    width: 10px !important;
+    height: 20px !important;
+    cursor: pointer;
+    z-index: 99!important;
+}
+
+.banner-next {
+    background-image: url(assets/image/main/arrow-rigth.png);
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-position: center !important;
+    width: 10px !important;
+    height: 20px !important;
+    cursor: pointer;
+    z-index: 99!important;
+}
+
+.banner-prev {
+    background-image: url(assets/image/main/arrow-left.png);
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-position: center !important;
+    width: 10px !important;
+    height: 20px !important;
+    cursor: pointer;
+    z-index: 99!important;
+}
+
+.button-next {
+    background-image: url(assets/image/main/rigth.png);
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-position: center !important;
+    width: 10px !important;
+    height: 20px !important;
+    cursor: pointer;
+}
+
+.button-prev {
+    background-image: url(assets/image/main/left.png);
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-position: center !important;
+    width: 10px !important;
+    height: 20px !important;
+    cursor: pointer;
+}
+
+.next {
+    background-image: url(assets/image/main/rigth.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 10px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.prev {
+    background-image: url(assets/image/main/left.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 10px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.activity {
+    border-bottom: 2px solid #3070B6;
+}
+
+.paginate {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    z-index: 100;
+
+}
+
+.pagination {
+    margin-top: 62px;
+    margin-bottom: 62px;
+    display: flex;
+    list-style: none;
+    outline: none;
+}
+.pagination > .active > a {
+    background-color: #F2F6F9;
+    color: black;
+}
+
+.pagination > li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 28px;
+    height: 38px;
+    margin: 4px;
+    border-radius: 4px;
+    background-color: #F2F6F9;
+}
+
+.pagination > li > a {
+    margin: 4px;
+    outline: none;
+    cursor: pointer;
+}
+
+.pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus{
+    border-color: blue;
+    outline: none ;
+}
+
+.pagination > li > a, .pagination > li > span{
+    color: blue;
+}
+
+.pagination > li:first-child > a, .pagination > li:first-child > span, .pagination > li:last-child > a, .pagination > li:last-child > span{
+    border-radius: unset
+}
+
+.pagination > li:first-child > a,
+.pagination > li:first-child > span {
+    color: gray;
+}
+.pagination > li:last-child > a,
+.pagination > li:last-child > span {
+    color: gray;
+}
+
+.hover {
+    --s: 2px;   /* the thickness of the line */
+    --c: #ffffff; /* the color */
+    --_p: 100%;
+    color: #0000;
+    padding-bottom: var(--s);
+    background: white;
+    background:
+            linear-gradient(90deg,var(--c) 50%,#000 0) calc(100% - var(--_p,0%))/200% 100%,
+            linear-gradient(var(--c) 0 0) 0% 100%/var(--_p,0%) var(--s) no-repeat;
+    -webkit-background-clip: text,padding-box;
+
+}
+
+.hovers {
+    --s: 2px;   /* the thickness of the line */
+    --c: #ffffff; /* the color */
+
+    color: #0000;
+    padding-bottom: var(--s);
+    background: white;
+    background:
+            linear-gradient(90deg,var(--c) 50%,#000 0) calc(100% - var(--_p,0%))/200% 100%,
+            linear-gradient(var(--c) 0 0) 0% 100%/var(--_p,0%) var(--s) no-repeat;
+    -webkit-background-clip: text,padding-box;
+
+}
+
+.hovers:hover {
+    --_p: 100%;
+}
+
+.hover:hover {
+    --_p: 100%;
+}
+
+.menu-hover {
+    --s: 2px;   /* the thickness of the line */
+    --c: #ffffff; /* the color */
+
+    color: #0000;
+    padding-bottom: var(--s);
+    background: white;
+    background:
+            linear-gradient(90deg,var(--c) 50%,#000 0) calc(100% - var(--_p,0%))/200% 100%,
+            linear-gradient(var(--c) 0 0) 0% 100%/var(--_p,0%) var(--s) no-repeat;
+    -webkit-background-clip: text,padding-box;
+
+}
+
+.menu-hover:hover {
+    --_p: 100%;
+}
+

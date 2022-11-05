@@ -1,0 +1,83 @@
+ @tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.wrapper {
+  @apply container max-w-[1236px] m-auto flex flex-wrap xl:max-w-[1136px] 3lg:max-w-[1090px] 2lg:max-w-[1000px] lg:max-w-[930px] 2md:max-w-[836px] 3md:max-w-[780px] 1md:max-w-[730px] md:max-w-[716px] sm:max-w-[656px] 2sm:max-w-[600px] 3xs:max-w-[510px] 1sm:max-w-[560px] 3sm:max-w-[430px] 1xs:max-w-[470px]  xs:max-w-[360px] 2xs:max-w-[330px]
+}
+
+.wrap {
+  @apply container max-w-[1236px] block m-auto;
+}
+
+.btn-blue {
+  @apply block bg-[#F6CD49] text-white text-xs font-medium py-[10px] px-[10px] whitespace-nowrap hover:bg-layer;
+}
+
+.menu-list {
+  @apply block text-white text-base font-semibold my-[10px] whitespace-nowrap ml-8;
+}
+
+.drop-list {
+  @apply block text-white text-base font-semibold  whitespace-nowrap mt-2 ml-10
+}
+
+.crumbs {
+  @apply flex items-center cursor-pointer;
+}
+
+.arrow {
+  @apply mx-4 w-2 h-4 sm:w-2 sm:h-3 xs:mx-2
+}
+
+btn-blue:hover {
+  @apply btn-blue;
+}
+
+.menu {
+  @apply flex text-white text-[15px] text-sm font-normal pb-1.5;
+}
+
+.menus {
+  @apply flex text-white text-[14px] text-sm font-normal pb-1.5;
+}
+
+.title {
+  @apply text-blue text-lg font-semibold mb-4;
+}
+
+.all-view {
+  @apply text-blue text-sm font-medium mt-2;
+}
+
+.social {
+  @apply w-6 h-6 rounded-[50%] bg-white flex justify-center items-center cursor-pointer;
+}
+
+.socials {
+  @apply w-[32px] h-[32px] rounded-[50%] bg-blue flex justify-center items-center cursor-pointer;
+}
+
+.button {
+  @apply m-auto w-[189px] h-[34px] flex justify-center items-center bg-orange rounded text-white mt-[20px] mb-2 text-[15px] font-medium xl:mt-[12px] lg:text-sm lg:font-normal lg:w-[169px] lg:mt-[4px] lg:h-[28px] md:mt-[12px] md:text-[14px];
+}
+
+.btn {
+  @apply w-[140px] h-[36px] px-[22px] bg-orange rounded text-white flex justify-center items-center 2md:w-[100px] 2md:h-[26px];
+}
+
+.clock {
+  @apply text-[45px] font-bold text-white;
+}
+
+.name {
+  @apply text-[12px] mb-1 font-medium text-blue text-center sm:text-[10px] sm:font-normal
+}
+
+.description {
+  @apply text-[11px] font-light text-center px-[0px] leading-[13.31px] h-[53.19px] overflow-hidden
+}
+
+.link {
+  @apply font-semibold py-4 flex pl-12 3md:pl-3 3md:py-2 3md:font-normal sm:text-[14px] pr-4
+}
