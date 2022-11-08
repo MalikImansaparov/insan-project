@@ -40,7 +40,6 @@ const Menu = () => {
       {!openModal ? (
         <div className="bg-[#F6CD49]">
           <div className="wrapper h-[78px] flex justify-between items-center font-inter cursor-pointer">
-            <img src={logo} className="lg:hidden" alt="kelechek" onClick={() => navigate('/')} />
             <div
                 className="hidden lg:block cursor-pointer"
                 onClick={toggleMenu}
@@ -51,7 +50,8 @@ const Menu = () => {
                   <img src={burger} alt="open" />
               )}
             </div>
-            <div className="flex w-[55%] pt-2 align-middle text-white justify-between 3lg:hidden">
+            <img src={logo} alt="kelechek" onClick={() => navigate('/')} />
+            <div className="flex w-[55%] pt-2 align-middle text-white justify-between lg:hidden">
               <NavLink to=""
                   className={({ isActive }) => (isActive ? 'hover menu' : 'menu')}
                   onClick={() => window.open('https://jashtar.info/')}
@@ -69,7 +69,7 @@ const Menu = () => {
               </NavLink>
               <DirectionMenu/>
             </div>
-            <div className="flex justify-between w-[25%] pt-2 lg:w-[30%] 2md:w-[35%] xs:w-[60%] 1sm:w-[50%] 2xs:w-[70%]">
+            <div className="flex justify-between w-[20%] pt-2 2lg:w-[10%] lg:w-15%] 2md:w-[15%] xs:w-[25%] 1sm:w-[20%] 2xs:w-[27%] 2xs:pr-2">
               <Language/>
               <img
                   src={search}
@@ -77,13 +77,15 @@ const Menu = () => {
                   className="w-[20px] h-[20px] cursor-pointer"
                   onClick={toggleModal}
               />
-              <Social />
+              <div className="2lg:hidden">
+               <Social />
+              </div>
             </div>
           </div>
         </div>
       ) : (
           <div className="w-full h-[78px] bg-blueLight z-10">
-            <div className="wrapper py-[22px] px-2 ">
+            <div className="wrapper py-[22px] px-2">
               <input
                   type="text"
                   autoFocus={true}
@@ -140,9 +142,9 @@ const Menu = () => {
               </div>
               {show && (
                   <div className="ml-[10px]" onClick={toggleMenu}>
-                    <Link to='/business' className="drop-list" >{t("business")}</Link>
-                    <Link to='/medicine' className="drop-list">{t("medicine")}</Link>
-                    <Link to='/sport' className="drop-list">{t("sport")}</Link>
+                    <Link to='/direction/1' className="drop-list" >{t("business")}</Link>
+                    <Link to='/direction/2' className="drop-list">{t("medicine")}</Link>
+                    <Link to='/direction/3' className="drop-list">{t("sport")}</Link>
                   </div>
               )}
             </div>

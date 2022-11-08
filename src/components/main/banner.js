@@ -69,7 +69,7 @@ const Banner = () => {
                                 <div className="container max-w-[1236px] m-auto h-[481px] md:h-[400px] text-white bg-gradient-banner opacity-[100%] absolute top-0 left-0 right-0 flex 3sm:h-[300px]
                                 items-center z-10 xl:max-w-[1090px] 2lg:max-w-[900px] lg:max-w-[800px] 2md:max-w-[700px] md:max-w-[600px]">
                                     {i18n.language === 'ky' && (
-                                        <div className="ml-[50px] items-center 2lg:ml-[40px] lg:ml-[30px] 2md:ml-[20px] md:ml-[15px]">
+                                        <div className="ml-[50px] items-center 2lg:ml-[40px] lg:ml-[30px] 2md:ml-[20px] md:ml-[15px] pr-3">
                                             <p className="text-[30px] font-bold xl:text-[26px] lg:text-[24px] md:text-[20px] sm:text-[18px] 1xs:text-[16px] 2xs:text-[14px] 2xs:font-normal">
                                                 <Sanitized html={item.title_ky} />
                                             </p>
@@ -79,7 +79,7 @@ const Banner = () => {
                                         </div>
                                     )}
                                     {i18n.language === 'ru' && (
-                                        <div className="ml-[50px] items-center 2lg:ml-[40px] lg:ml-[30px] 2md:ml-[20px] md:ml-[15px]">
+                                        <div className="ml-[50px] items-center 2lg:ml-[40px] lg:ml-[30px] 2md:ml-[20px] md:ml-[15px] pr-3">
                                             <p className="text-[30px] font-bold xl:text-[28px] lg:text-[24px] md:text-[20px] sm:text-[18px] 1xs:text-[16px]">
                                                 <Sanitized html={item.title_ru} />
                                             </p>
@@ -89,7 +89,7 @@ const Banner = () => {
                                         </div>
                                     )}
                                     {i18n.language === 'en' && (
-                                        <div className="ml-[50px] items-center 2lg:ml-[40px] lg:ml-[30px] 2md:ml-[20px] md:ml-[15px]">
+                                        <div className="ml-[50px] items-center 2lg:ml-[40px] lg:ml-[30px] 2md:ml-[20px] md:ml-[15px] pr-3">
                                             <p className="text-[30px] font-bold xl:text-[28px] lg:text-[24px] md:text-[20px] sm:text-[18px] 1xs:text-[16px]">
                                                 <Sanitized html={item.title_en} />
                                             </p>

@@ -27,7 +27,7 @@ export const News = () => {
                     {response &&
                         response.results.map((item) => (
                             <Link
-                                to={`${item.id}`}
+                                to={`news/${item.id}`}
                                 className="block mb-12 w-[384px] h-[419px] m-auto shadow-lg rounded bg-white pb-4 leading-5 cursor-pointer hover:shadow-2xl 3lg:w-[384px] xl:w-[340px] 1sm:w-[384px] xs:w-[300px]"
                             >
                                 <div className="mb-3 h-[247px] overflow-hidden rounded-t xl:w-[340px] 2lg:w-[340px] 1sm:w-full xs:w-[300px] xs:h-[230px] xs:mb-0 3lg:w-full 2lg:w-full">

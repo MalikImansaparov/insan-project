@@ -1,6 +1,5 @@
 import {useFetch} from "../../api/useFetch";
 import {ClipLoader} from "react-spinners";
-import {BreadCrumb} from "../../components/general/breadcrumb";
 import {Sanitized} from "../../components/general/sanitize";
 import {useTranslation} from "react-i18next";
 import { api, base, newsUrl, uri} from "../../api/const";
@@ -62,7 +61,7 @@ export const StoryPage = () => {
         <>
             {response && response.filter((i) => i.tab === 1)
                 .map((item) => (
-                    <div className="w-full mb-[34px] object-cover bg-center" key={item.id } style={{backgroundImage:`url(${uri}${item.background_image})`}}>
+                    <div className="w-full mb-[34px] object-cover bg-center " key={item.id } style={{backgroundImage:`url(${uri}${item.background_image})`}}>
                         <div className="w-full min-h-[481px] md:min-h-[581px] overflow-hidden relative z-0 pb-8 font-inter">
                             <div className="absolute top-0 left-0 right-0 bg-gradient-ministry w-full min-h-[481px] md:min-h-[581px] z-0" ></div>
                             <div className="container max-w-[1236px] m-auto min-h-[481px] text-white bg-gradient-banner opacity-[100%] absolute top-0 left-0 right-0 flex 2md:pt-24
@@ -72,7 +71,7 @@ export const StoryPage = () => {
                                     {/*    {t('history')}*/}
                                     {/*</div>*/}
 
-                                    <p className="my-4 leading-[19.3px] relative z-10 text-justify mx-4 xs:my-0">
+                                    <p className="my-4 leading-[19.3px] relative z-10 text-justify mx-6 xs:my-0">
                                         {i18n.language === "ky" &&
                                             <Sanitized html={item.title_ky}/>
                                         }
