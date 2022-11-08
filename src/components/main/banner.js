@@ -98,7 +98,6 @@ const Banner = () => {
                                             </p>
                                         </div>
                                     )}
-
                                 </div>
                             </div>
                         </SwiperSlide>

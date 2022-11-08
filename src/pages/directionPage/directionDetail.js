@@ -65,18 +65,6 @@ console.log(id)
         }
     };
 
-    // if (isLoading) {
-    //     return (
-    //         <div role="status" className='flex justify-center my-28 pb-24'>
-    //             <ClipLoader
-    //                 color="#1985A1"
-    //                 size={300}
-    //             />
-    //         </div>
-    //     )
-    // }
-
-
     return (
         <>
             {response && response.filter((i) => i.type == id)
