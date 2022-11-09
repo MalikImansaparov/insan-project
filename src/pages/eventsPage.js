@@ -66,7 +66,7 @@ const EventsPage = () => {
             <div className="container">
                 <BreadCrumb />
             </div>
-            <div className="flex justify-around flex-wrap text-justify wrapper">
+            <div className="flex justify-around flex-wrap wrapper">
                 {response.results &&
                     response.results.map((item) => (
                         <Link to={`${item.id}`} className="block mb-12 w-[384px] h-[419px] m-auto shadow-lg rounded bg-white pb-4 mb-4 leading-5 cursor-pointer hover:shadow-2xl 3lg:w-[384px] xl:w-[340px] 1sm:w-[384px] xs:w-[300px]">

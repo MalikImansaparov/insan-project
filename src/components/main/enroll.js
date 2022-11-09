@@ -84,54 +84,54 @@ export const Enroll = () => {
                         <div className="h-[100%] w-[100%] flex justify-between">
                           <div className="mt-[35px] max-w-[815px] m-auto">
                             <div className="max-w-[561px]">
-                              {i18n.language === 'ky' && (
-                                  <>
-                                    <p className="text-[22px] text-semibold text-white max-w-[461px] mb-[18px] 2md:text-[18px] sm:text-[16px] sm:mb-[0px] text-bold h-[58px] overflow-hidden">
-                                      <Sanitized
-                                          html={
-                                            item.title_ky.length > 62
-                                                ? item.title_ky.slice(0, 62) + '...'
-                                                : item.title_ky
-                                          }
-                                      />
-                                    </p>
-                                    <p className="text-[16px] text-normal max-h-[38px] grey overflow-y-hidden leading-[19px] 2md:text-[14px] sm:text-[12px]">
-                                      <Sanitized html={item.desc_ky} />
-                                    </p>
-                                  </>
-                              )}
-                              {i18n.language === 'ru' && (
-                                  <>
-                                    <p className="text-[22px] text-semibold text-white max-w-[461px] mb-[18px] 2md:text-[18px] sm:text-[16px] sm:mb-[0px] text-bold h-[58px] overflow-hidden">
-                                      <Sanitized
-                                          html={
-                                            item.title_ru.length > 62
-                                                ? item.title_ru.slice(0, 62) + '...'
-                                                : item.title_ru
-                                          }
-                                      />
-                                    </p>
-                                    <p className="text-[16px] text-normal max-h-[38px] grey overflow-y-hidden leading-[19px] 2md:text-[14px] sm:text-[12px]">
-                                      <Sanitized html={item.desc_ru} />
-                                    </p>
-                                  </>
-                              )}
-                              {i18n.language === 'en' && (
-                                  <>
-                                    <p className="text-[22px] text-semibold text-white max-w-[461px] mb-[18px] 2md:text-[18px] sm:text-[16px] sm:mb-[0px] text-bold h-[58px] overflow-hidden">
-                                      <Sanitized
-                                          html={
-                                            item.title_en.length > 62
-                                                ? item.title_en.slice(0, 62) + '...'
-                                                : item.title_en
-                                          }
-                                      />
-                                    </p>
-                                    <p className="text-[16px] text-normal max-h-[38px] grey overflow-y-hidden leading-[19px] 2md:text-[14px] sm:text-[12px]">
-                                      <Sanitized html={item.desc_en} />
-                                    </p>
-                                  </>
-                              )}
+                                {i18n.language === 'ky' && (
+                                    <>
+                                        <p className="text-[22px] text-semibold text-blue max-w-[461px] mb-[18px] 2md:text-[18px] sm:text-[16px] sm:mb-[0px] text-bold h-[62px] overflow-hidden">
+                                            <Sanitized
+                                                html={
+                                                    item.title_ky.length > 62
+                                                        ? item.title_ky.slice(0, 62) + '...'
+                                                        : item.title_ky
+                                                }
+                                            />
+                                        </p>
+                                        <p className="text-[16px] text-normal max-h-[38px]  grey overflow-y-hidden leading-[19px] 2md:text-[14px] sm:text-[12px]">
+                                            <Sanitized html={item.desc_ky} />
+                                        </p>
+                                    </>
+                                )}
+                                {i18n.language === 'ru' && (
+                                    <>
+                                        <p className="text-[22px] text-semibold text-blue max-w-[461px] mb-[18px] 2md:text-[18px] sm:text-[16px] sm:mb-[0px] text-bold h-[62px] overflow-hidden">
+                                            <Sanitized
+                                                html={
+                                                    item.title_ru.length > 62
+                                                        ? item.title_ru.slice(0, 62) + '...'
+                                                        : item.title_ru
+                                                }
+                                            />
+                                        </p>
+                                        <p className="text-[16px] text-normal max-h-[38px] grey overflow-y-hidden leading-[19px] 2md:text-[14px] sm:text-[12px]">
+                                            <Sanitized html={item.desc_ru} />
+                                        </p>
+                                    </>
+                                )}
+                                {i18n.language === 'en' && (
+                                    <>
+                                        <p className="text-[22px] text-semibold text-blue max-w-[461px] mb-[18px] 2md:text-[18px] sm:text-[16px] sm:mb-[0px] text-bold h-[58px] overflow-hidden">
+                                            <Sanitized
+                                                html={
+                                                    item.title_en.length > 62
+                                                        ? item.title_en.slice(0, 62) + '...'
+                                                        : item.title_en
+                                                }
+                                            />
+                                        </p>
+                                        <p className="text-[16px] text-normal max-h-[38px] grey overflow-y-hidden leading-[19px] 2md:text-[14px] sm:text-[12px]">
+                                            <Sanitized html={item.desc_en} />
+                                        </p>
+                                    </>
+                                )}
                               <div className="flex mt-8 justify-between 2md:mt-4 sm:mt-2">
                                 <p className="text-grey flex 2md:text-[14px] items-center">
                                   <img
