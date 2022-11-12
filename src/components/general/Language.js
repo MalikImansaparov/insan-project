@@ -17,13 +17,13 @@ export const Language = () => {
 
     return (
       <div className="group relative">
-        <button className="flex text-white relative" onClick={toggleModal}>
-          <img src={lang} className="pt-2 mr-[7px] relative" alt="lang" />
-          <span className="text-sm font-normal">{t('lang')}</span>
+        <button className="flex text-white relative mt-1" onClick={toggleModal}>
+          <img src={lang} className="pt-2 mr-[7px] relative " alt="lang"/>
+          <span className="text-[15px] font-normal">{t('lang')}</span>
         </button>
         {openModal && (
           <ul className="absolute z-10 cursor-pointer">
-            <li className="btn-blue mt-[27px] 2lg:mt-[20px]" onClick={() => onChange('ky')}>
+            <li className="btn-blue mt-[22px] 2lg:mt-[16px]" onClick={() => onChange('ky')}>
               <>Кыргызча</>
             </li>
             <li className="btn-blue" onClick={() => onChange('ru')}>

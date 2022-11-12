@@ -9,9 +9,9 @@ export const DirectionMenu = () => {
     return (
         <div className="group relative">
             <NavLink to="/direction/1" className={({isActive}) =>
-                isActive ? 'hovers menus' : 'menus'}>
-                <img src={arr} className='mr-[5px] text-[15px] font-normal' alt='lang'/>
-                {t("direction")}
+                isActive ? 'hovers menus font-bold ' : 'menus font-bold'}>
+                <img src={arr} className='mr-[5px] ' alt='lang'/>
+                <span className="font-bold text-[15px]">{t("direction")}</span>
             </NavLink>
             <ul className="absolute hidden group-hover:block z-20">
                 <Link to='/direction/1' className="btn-blue mt-[22px]">{t("business")}</Link>

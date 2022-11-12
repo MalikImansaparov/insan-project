@@ -35,7 +35,7 @@ btn-blue:hover {
 }
 
 .menu {
-  @apply flex text-white text-[15px] text-sm font-normal pb-1.5;
+  @apply flex text-white text-[15px] font-semibold;
 }
 
 .menus {
@@ -51,7 +51,7 @@ btn-blue:hover {
 }
 
 .social {
-  @apply w-6 h-6 rounded-[50%] bg-white flex justify-center items-center cursor-pointer;
+  @apply w-[28px] h-[28px] rounded-[50%] bg-white flex justify-center items-center cursor-pointer;
 }
 
 .socials {
