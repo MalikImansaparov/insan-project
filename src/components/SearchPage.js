@@ -20,70 +20,192 @@ const SearchPage = () => {
     }
 
     return (
-        <div className="wrapper py-[62px] font-inter sm:py-[48px] xs:py-[24px] ">
-            {isEmpty && (
-                <div className="flex w-[1236px] m-auto shadow-md rounded px-8 my-8 bg-white mb-72">
-                    <p className="my-16 text-[20px]">{t('notFound')}</p>
-                </div>
+      <div className="wrapper py-[62px] font-inter sm:py-[48px] xs:py-[24px] min-h-[100vh]">
+        {isEmpty && (
+          <div className="flex w-[1236px] m-auto shadow-md rounded px-8 my-8 bg-white mb-72">
+            <p className="my-16 text-[20px]">{t('notFound')}</p>
+          </div>
+        )}
+        {items && (
+          <div className="w-[1236px] shadow-md rounded px-8 mb-8 bg-white 3xs:px-4 2xs:px-2 mb-40">
+            {items.news && items.news.length > 0 && (
+              <p className="font-medium mt-4">
+                {t('news')}
+                <span className="ml-1">({items.news.length})</span>
+              </p>
             )}
-            {items &&
+            {items.news &&
+              items.news.map((item, idx) => (
+                <div key={idx} className="mb-4 ">
+                  {i18n.language === 'ky' && (
                     <div
-                        className="w-[1236px] shadow-md rounded px-8 mb-8 bg-white 3xs:px-4 2xs:px-2 mb-40"
+                      onClick={() => window.location.replace(item.next)}
+                      className="text-[16px] my-2 font-medium text-blue cursor-pointer"
                     >
-                                {items.story && items.story.length > 0 && <p className="font-medium mt-4">{t('history')}<span className="ml-1">({items.story.length})</span></p>}
-                                   { items.story && items.story.map((item, idx) => (
-                                       <div key={idx} className="mb-4 ">
-                                           {i18n.language === 'ky' &&
-                                        <div onClick={() => window.location.replace(item.next)} className="text-[16px] my-2 font-medium text-blue cursor-pointer">
-                                            {item.title_ky}
-                                        </div>}
-                                           {i18n.language === 'ru' &&
-                                               <div onClick={() => window.location.replace(item.next)} className="text-[16px] my-2 font-medium text-blue cursor-pointer">
-                                                   {item.title_ru}
-                                               </div>}
-                                           {i18n.language === 'en' &&
-                                               <div onClick={() => window.location.replace(item.next)} className="text-[16px] my-2 font-medium text-blue cursor-pointer">
-                                                   {item.title_en}
-                                               </div>}
-                                       </div>
-                                    ))}
-                                {items.prominent && items.prominent.length > 0 && <p className=" font-medium mt-4">{t('people')}<span className="ml-1">({items.prominent.length})</span></p>}
-                                { items.prominent && items.prominent.map((item, idx) => (
-                                    <div key={idx} className="mb-4">
-                                        {i18n.language === 'ky' &&
-                                            <div onClick={() => window.location.replace(item.next)} className="text-[16px] my-2 font-medium text-blue cursor-pointer">
-                                                {item.title_ky}
-                                            </div>}
-                                        {i18n.language === 'ru' &&
-                                            <div onClick={() => window.location.replace(item.next)} className="text-[16px] my-2  font-medium text-blue cursor-pointer">
-                                                {item.title_ru}
-                                            </div>}
-                                        {i18n.language === 'en' &&
-                                            <div onClick={() => window.location.replace(item.next)} className="text-[16px] my-2  font-medium text-blue cursor-pointer">
-                                                {item.title_en}
-                                            </div>}
-                                    </div>
-                                ))}
-                                {items.generation && items.generation.length > 0 && <p className=" font-medium mt-4">{t('generation')}<span className="ml-1">({items.generation.length})</span></p>}
-                                { items.generation &&  items.generation.map((item, idx) => (
-                                    <div key={idx} className="mb-4">
-                                        {i18n.language === 'ky' &&
-                                            <div onClick={() => window.location.replace(item.next)} className="text-[16px] my-2 font-medium text-blue cursor-pointer">
-                                                {item.title_ky}
-                                            </div>}
-                                        {i18n.language === 'ru' &&
-                                            <div onClick={() => window.location.replace(item.next)} className="text-[16px] my-2 font-medium text-blue cursor-pointer">
-                                                {item.title_ru}
-                                            </div>}
-                                        {i18n.language === 'en' &&
-                                            <div onClick={() => window.location.replace(item.next)} className="text-[16px] my-2 font-medium text-blue cursor-pointer">
-                                                {item.title_en}
-                                            </div>}
-                                    </div>
-                                ))}
+                      {item.title_ky}
                     </div>
-                }
-        </div>
+                  )}
+                  {i18n.language === 'ru' && (
+                    <div
+                      onClick={() => window.location.replace(item.next)}
+                      className="text-[16px] my-2 font-medium text-blue cursor-pointer"
+                    >
+                      {item.title_ru}
+                    </div>
+                  )}
+                  {i18n.language === 'en' && (
+                    <div
+                      onClick={() => window.location.replace(item.next)}
+                      className="text-[16px] my-2 font-medium text-blue cursor-pointer"
+                    >
+                      {item.title_en}
+                    </div>
+                  )}
+                </div>
+              ))}
+            {items.events && items.events.length > 0 && (
+              <p className="font-medium mt-4">
+                {t('events')}
+                <span className="ml-1">({items.events.length})</span>
+              </p>
+            )}
+            {items.events &&
+              items.events.map((item, idx) => (
+                <div key={idx} className="mb-4">
+                  {i18n.language === 'ky' && (
+                    <div
+                      onClick={() => window.location.replace(item.next)}
+                      className="text-[16px] my-2 font-medium text-blue cursor-pointer"
+                    >
+                      {item.title_ky}
+                    </div>
+                  )}
+                  {i18n.language === 'ru' && (
+                    <div
+                      onClick={() => window.location.replace(item.next)}
+                      className="text-[16px] my-2 font-medium text-blue cursor-pointer"
+                    >
+                      {item.title_ru}
+                    </div>
+                  )}
+                  {i18n.language === 'en' && (
+                    <div
+                      onClick={() => window.location.replace(item.next)}
+                      className="text-[16px] my-2 font-medium text-blue cursor-pointer"
+                    >
+                      {item.title_en}
+                    </div>
+                  )}
+                </div>
+              ))}
+            {items.story && items.story.length > 0 && (
+              <p className="font-medium mt-4">
+                {t('history')}
+                <span className="ml-1">({items.story.length})</span>
+              </p>
+            )}
+            {items.story &&
+              items.story.map((item, idx) => (
+                <div key={idx} className="mb-4 ">
+                  {i18n.language === 'ky' && (
+                    <div
+                      onClick={() => window.location.replace(item.next)}
+                      className="text-[16px] my-2 font-medium text-blue cursor-pointer"
+                    >
+                      {item.title_ky}
+                    </div>
+                  )}
+                  {i18n.language === 'ru' && (
+                    <div
+                      onClick={() => window.location.replace(item.next)}
+                      className="text-[16px] my-2 font-medium text-blue cursor-pointer"
+                    >
+                      {item.title_ru}
+                    </div>
+                  )}
+                  {i18n.language === 'en' && (
+                    <div
+                      onClick={() => window.location.replace(item.next)}
+                      className="text-[16px] my-2 font-medium text-blue cursor-pointer"
+                    >
+                      {item.title_en}
+                    </div>
+                  )}
+                </div>
+              ))}
+            {items.prominent && items.prominent.length > 0 && (
+              <p className=" font-medium mt-4">
+                {t('people')}
+                <span className="ml-1">({items.prominent.length})</span>
+              </p>
+            )}
+            {items.prominent &&
+              items.prominent.map((item, idx) => (
+                <div key={idx} className="mb-4">
+                  {i18n.language === 'ky' && (
+                    <div
+                      onClick={() => window.location.replace(item.next)}
+                      className="text-[16px] my-2 font-medium text-blue cursor-pointer"
+                    >
+                      {item.title_ky}
+                    </div>
+                  )}
+                  {i18n.language === 'ru' && (
+                    <div
+                      onClick={() => window.location.replace(item.next)}
+                      className="text-[16px] my-2  font-medium text-blue cursor-pointer"
+                    >
+                      {item.title_ru}
+                    </div>
+                  )}
+                  {i18n.language === 'en' && (
+                    <div
+                      onClick={() => window.location.replace(item.next)}
+                      className="text-[16px] my-2  font-medium text-blue cursor-pointer"
+                    >
+                      {item.title_en}
+                    </div>
+                  )}
+                </div>
+              ))}
+            {items.generation && items.generation.length > 0 && (
+              <p className=" font-medium mt-4">
+                {t('generation')}
+                <span className="ml-1">({items.generation.length})</span>
+              </p>
+            )}
+            {items.generation &&
+              items.generation.map((item, idx) => (
+                <div key={idx} className="mb-4">
+                  {i18n.language === 'ky' && (
+                    <div
+                      onClick={() => window.location.replace(item.next)}
+                      className="text-[16px] my-2 font-medium text-blue cursor-pointer"
+                    >
+                      {item.title_ky}
+                    </div>
+                  )}
+                  {i18n.language === 'ru' && (
+                    <div
+                      onClick={() => window.location.replace(item.next)}
+                      className="text-[16px] my-2 font-medium text-blue cursor-pointer"
+                    >
+                      {item.title_ru}
+                    </div>
+                  )}
+                  {i18n.language === 'en' && (
+                    <div
+                      onClick={() => window.location.replace(item.next)}
+                      className="text-[16px] my-2 font-medium text-blue cursor-pointer"
+                    >
+                      {item.title_en}
+                    </div>
+                  )}
+                </div>
+              ))}
+          </div>
+        )}
+      </div>
     );
 };
 
