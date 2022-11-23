@@ -106,7 +106,7 @@ const SearchPage = () => {
             )}
             {items.story &&
               items.story.map((item, idx) => (
-                <div key={idx} className="mb-4 ">
+                <div key={idx} className="mb-4">
                   {i18n.language === 'ky' && (
                     <div
                       onClick={() => window.location.replace(item.next)}

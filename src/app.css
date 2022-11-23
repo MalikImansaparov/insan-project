@@ -11,7 +11,7 @@
 }
 
 .btn-blue {
-  @apply block bg-[#F6CD49] text-white text-xs font-medium py-[10px] px-[10px] whitespace-nowrap hover:bg-layer;
+  @apply block bg-[#F6CD49] text-[12px] font-semibold py-[10px] px-[10px] whitespace-nowrap hover:bg-layer;
 }
 
 .menu-list {
@@ -19,7 +19,7 @@
 }
 
 .drop-list {
-  @apply block text-white text-base font-semibold  whitespace-nowrap mt-2 ml-10
+  @apply block text-[#403e3e] text-base font-semibold  whitespace-nowrap mt-2 ml-10
 }
 
 .crumbs {
@@ -35,11 +35,19 @@ btn-blue:hover {
 }
 
 .menu {
-  @apply flex text-white text-[15px] font-semibold;
+  @apply flex text-[#403e3e] text-[15px] font-semibold;
+}
+
+.menu:hover {
+@apply text-white
 }
 
 .menus {
-  @apply flex text-white text-[14px] text-sm font-normal pb-1.5;
+  @apply flex text-[#403e3e] text-[14px] text-sm font-normal pb-1.5;
+}
+
+.menus:hover {
+@apply text-white
 }
 
 .title {

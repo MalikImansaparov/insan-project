@@ -9,7 +9,7 @@ document.body.style.overflow = '';
 
 function App() {
   return (
-    <div className="max-w-[1440px] m-auto font-inter text-black bg-white relative h-[100%]">
+    <div className="m-auto font-inter text-black bg-white relative h-[100%]">
       <Menu />
       <Routes>
         {publicRoutes.map((route) => (
@@ -20,10 +20,10 @@ function App() {
           />
         ))}
       </Routes>
-        <div className="box-border min-h-[100%] pb-[80px]"></div>
-        <div className="h-[80px] mt-[-80px]">
-            <Footer />
-        </div>
+      <div className="box-border min-h-[100%] pb-[80px]"></div>
+      <div className="h-[80px] mt-[-80px]">
+        <Footer />
+      </div>
     </div>
   );
 }

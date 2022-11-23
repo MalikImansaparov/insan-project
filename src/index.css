@@ -237,7 +237,7 @@ html, body {
 
 .hover {
     --s: 2px;   /* the thickness of the line */
-    --c: #ffffff; /* the color */
+    --c: #403e3e; /* the color */
     --_p: 100%;
     color: #0000;
     padding-bottom: var(--s);
@@ -251,7 +251,7 @@ html, body {
 
 .hovers {
     --s: 2px;   /* the thickness of the line */
-    --c: #ffffff; /* the color */
+    --c: #403e3e; /* the color */
 
     color: #0000;
     padding-bottom: var(--s);

@@ -18,7 +18,7 @@ const Footer = () => {
           </div>
           {response &&
             response.map((item) => (
-              <div className="pt-[8px] text-white" key={item.id}>
+              <div className="pt-[8px] text-[#403e3e]" key={item.id}>
                 {i18n.language === 'ky' && (
                   <div className="font-medium text-xs mb-1.5">
                     {item.address_ky}
