@@ -17,7 +17,7 @@ i18n
   .use(LanguageDetector)
   .use(initReactI18next)
   .init({
-    lng: 'ky',
+    lng: sessionStorage.getItem('lng') || 'ky',
     detection: {
       debug: false,
       checkWhitelist: true,

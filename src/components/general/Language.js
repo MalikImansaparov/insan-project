@@ -12,6 +12,7 @@ export const Language = () => {
 
   const onChange = (lng) => {
     changeLanguage(lng);
+    sessionStorage.setItem('lng', lng);
     toggleModal();
   };
 
