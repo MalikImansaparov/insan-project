@@ -60,8 +60,10 @@ const NewsPage = () => {
       <div className="flex justify-center flex-wrap wrapper min-h-[70vh]">
         {response &&
           response.map((item) => (
-            <Link
-              to={`${item.source}/${item.id}`}
+            <div
+              onClick={() =>
+                window.location.replace(`${item.source}/${item.id}`)
+              }
               className="block mb-12 w-[384px] h-[419px] m-auto shadow-lg rounded bg-white pb-4 leading-5 cursor-pointer hover:shadow-2xl 3lg:w-[384px] xl:w-[340px] 1sm:w-[384px] xs:w-[300px]"
             >
               <div className="mb-3 h-[247px] overflow-hidden rounded-t xl:w-[340px] 2lg:w-[340px] 1sm:w-full xs:w-[300px] xs:h-[230px] xs:mb-0 3lg:w-full 2lg:w-full">
@@ -117,7 +119,7 @@ const NewsPage = () => {
                   </div>
                 </div>
               </div>
-            </Link>
+            </div>
           ))}
       </div>
       {/* <div className="paginate">
