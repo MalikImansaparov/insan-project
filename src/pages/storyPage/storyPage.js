@@ -64,7 +64,7 @@ export const StoryPage = () => {
             .filter((i) => i.tab === 1)
             .map((item) => (
               <div
-                className="w-full mb-[34px] object-cover bg-center "
+                className="w-full mb-[34px] object-cover bg-center"
                 key={item.id}
                 style={{
                   backgroundImage: `url(${uri}${item.background_image})`,
@@ -99,7 +99,12 @@ export const StoryPage = () => {
                 </div>
               </div>
             ))}
-        <div className="wrapper flex justify-center flex-wrap">
+        <div className="wrapper flex justify-center flex-wrap min-h-[50vh]">
+          {respond.results && respond.results.length === 0 && (
+            <div className="flex justify-center align-middle">
+              <h3>{t('notFound')}</h3>
+            </div>
+          )}
           {respond.results &&
             respond.results.map((item) => (
               <Link

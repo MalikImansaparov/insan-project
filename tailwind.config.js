@@ -3,6 +3,7 @@ module.exports = {
   presets: [],
   theme: {
     screens: {
+      '6xl': { max: '3200px' },
       '4xl': { max: '2200px' },
       '2xl': { max: '1535px' },
       '3xl': { max: '1389px' },

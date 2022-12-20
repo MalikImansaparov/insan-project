@@ -98,7 +98,12 @@ export const ProminentPage = () => {
               </div>
             </div>
           ))}
-      <div className="wrapper flex justify-center flex-wrap">
+      <div className="wrapper flex justify-center flex-wrap min-h-[50vh]">
+        {respond.results && respond.results.length === 0 && (
+          <div className="flex justify-center align-middle">
+            <h3>{t('notFound')}</h3>
+          </div>
+        )}
         {respond.results &&
           respond.results.map((item) => (
             <Link
