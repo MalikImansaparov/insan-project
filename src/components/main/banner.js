@@ -59,7 +59,7 @@ const Banner = () => {
                     className="w-full h-[481px] object-cover bg-no-repeat absolute right-0 top-0 z-10"
                   />
                   <div
-                    className="h-[481px] max-w-[800px] md:h-[1280px]
+                    className="h-[481px] max-w-[850px] md:h-[1280px]
                                 1xs:h-[1400px] overflow-hidden absolute left-0 top-0 3xs:top-8 1sm:top-5 1xs:top-10 xs:top-12 2xs:top-16 xs:top-18"
                   >
                     <img
